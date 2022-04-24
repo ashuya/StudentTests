@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Base{% endblock %} - STP</title>
+    <link rel="stylesheet" href="{% static 'tests/style.css' %}">
+</head>
+<body>
+    <header>
+        {% include 'tests/header.html' %}
+    </header>
+    <main>
+        {% block content %}
+            There's none
+        {% endblock %}
+    </main>
+    <footer>
+        {% include 'tests/footer.html' %}
+    </footer>
+</body>
+</html>
